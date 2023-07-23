@@ -1,19 +1,68 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id "io.qameta.allure" version "2.11.2"
 }
-
-group 'ru.plnvoran'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation (
+            "org.assertj:assertj-core:3.24.2",
+            "org.aeonbits.owner:owner:1.0.12",
+            "com.codeborne:selenide:6.13.0",
+            "org.junit.jupiter:junit-jupiter:5.9.2",
+            "org.slf4j:slf4j-simple:2.0.7",
+            "com.github.javafaker:javafaker:1.0.2",
+            "io.qameta.allure:allure-selenide:2.22.0")
+}
+
+allure {
+    report {
+        version.set("2.22.0")
+    }
+    adapter { // отвечает за появление build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.22.0") //версия интеграции фреймворка и Allure
+            }
+        }
+
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }
 
 test {
     useJUnitPlatform()
+}
+
+//нужно, чтобы брать переменные из командной строки через -D<имя переменной>=<значение>
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+}
+
+task practice_form(type: Test) {
+    useJUnitPlatform{
+        includeTags("practice_form")
+    }
+}
+task smoke(type: Test) {
+    useJUnitPlatform{
+        includeTags("smoke")
+    }
+}
+task blocker(type: Test) {
+    useJUnitPlatform{
+        includeTags("blocker")
+    }
+}
+task remote(type: Test) {
+    useJUnitPlatform{
+        includeTags("remote")
+    }
 }
