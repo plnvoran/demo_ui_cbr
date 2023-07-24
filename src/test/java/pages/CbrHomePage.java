@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import pages.components.NetWorksComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -10,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CbrHomePage {
-
+    NetWorksComponent netWorksComponent = new NetWorksComponent();
     SelenideElement topHorizontalMenu = $(".home-header_top"),
             headerLogoRu = $(".home-header_top .header_logo"),
             headerLogoEn = $(".home-header_top .header_logo_eng"),
@@ -69,4 +70,10 @@ public class CbrHomePage {
         languageNoActive.shouldHave(text(language));
         return this;
     }
+
+    public CbrHomePage checkAllNetWorksItemIsVisible() {
+        netWorksComponent.checkAllNetWorksItemIsVisible();
+        return this;
+    }
+
 }

@@ -46,23 +46,13 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
 }
 
-task practice_form(type: Test) {
-    useJUnitPlatform{
-        includeTags("practice_form")
-    }
-}
 task smoke(type: Test) {
     useJUnitPlatform{
         includeTags("smoke")
     }
 }
-task blocker(type: Test) {
+task regress (type: Test) {
     useJUnitPlatform{
-        includeTags("blocker")
-    }
-}
-task remote(type: Test) {
-    useJUnitPlatform{
-        includeTags("remote")
+        includeTags("regress")
     }
 }
