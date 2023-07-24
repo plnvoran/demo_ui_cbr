@@ -15,7 +15,7 @@ public class NetWorksComponent {
 
     public void checkAllNetWorksItemIsVisible() {
         networksItemVk.shouldHave(Condition.visible);
-        networksItemY.shouldHave(Condition.visible);
+        networksItemYt.shouldHave(Condition.visible);
         networksItemTg.shouldHave(Condition.visible);
         networksItemY.shouldHave(Condition.visible);
         networksItemOk.shouldHave(Condition.visible);

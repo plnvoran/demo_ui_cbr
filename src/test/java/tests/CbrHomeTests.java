@@ -1,6 +1,5 @@
 package tests;
 
-import pages.CbrHomePage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -112,7 +111,7 @@ public class CbrHomeTests extends TestBase {
             cbrHomePage.openPage();
         });
 
-        step("Switch to English", () -> {
+        step("Check networks links are on Home", () -> {
             cbrHomePage.checkAllNetWorksItemIsVisible();
         });
     }
