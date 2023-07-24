@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,6 +12,8 @@ import static io.qameta.allure.Allure.step;
 public class CbrHomeTests extends TestBase {
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @Tag("smoke")
     @DisplayName("Check main elements on RU Home")
     void checkMainElementsOnHomeRu() {
@@ -26,6 +30,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @Tag("smoke")
     @DisplayName("Check that default language is RU")
     void checkDefaultLanguage() {
@@ -42,6 +48,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @DisplayName("Check available languages")
     void checkAvailableLanguages() {
         step("Open home", () -> {
@@ -54,6 +62,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @DisplayName("Check switching to English")
     void switchToEnglish() {
         step("Open home", () -> {
@@ -68,6 +78,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @DisplayName("Check switching to Russian")
     void switchToRussian() {
         step("Open home", () -> {
@@ -85,6 +97,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @DisplayName("Check main elements on EN Home")
     void checkMainElementsOnHomeEn() {
         step("Open Home", () -> {
@@ -105,6 +119,8 @@ public class CbrHomeTests extends TestBase {
     }
 
     @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
     @DisplayName("Check that all networks links are on Home")
     void checkGoToYouTube() {
         step("Open home", () -> {
