@@ -53,3 +53,8 @@ task regress (type: Test) {
         includeTags("regress")
     }
 }
+task networks (type: Test) {
+    useJUnitPlatform{
+        includeTags("networks")
+    }
+}

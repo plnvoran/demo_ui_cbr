@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverConditions.url;
+import static data.NetWorksUrls.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CbrHomePage {
@@ -21,7 +23,7 @@ public class CbrHomePage {
             languageNoActive = $(".home-header_top .header_lang_item>a");
 
     public CbrHomePage openPage() {
-        open("/");
+        open("");
         return this;
     }
 
@@ -73,6 +75,21 @@ public class CbrHomePage {
 
     public CbrHomePage checkAllNetWorksItemIsVisible() {
         netWorksComponent.checkAllNetWorksItemIsVisible();
+        return this;
+    }
+
+    public CbrHomePage checkVkUrlIsRight() {
+        netWorksComponent.checkVkUrlIsRight();
+        return this;
+    }
+
+    public CbrHomePage checkOKUrlIsRight() {
+        netWorksComponent. checkOKUrlIsRight();
+        return this;
+    }
+
+    public CbrHomePage checkYandexUrlIsRight(){
+        netWorksComponent.checkYandexUrlIsRight();
         return this;
     }
 

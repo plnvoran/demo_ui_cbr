@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -25,7 +26,8 @@ public class CbrHomeTests extends TestBase {
                     .checkTopHorizontalMenuIsVisible()
                     .checkHeaderLeftMenuIsVisible()
                     .checkHeaderLogoIsVisible("RU")
-                    .checkActiveSlideIsVisible();
+                    .checkActiveSlideIsVisible()
+                    .checkAllNetWorksItemIsVisible();
         });
     }
 
@@ -43,7 +45,6 @@ public class CbrHomeTests extends TestBase {
         });
         step("Check RU Home title", () -> {
             cbrHomePage.checkHomeTitle("RU");
-
         });
     }
 
@@ -99,36 +100,50 @@ public class CbrHomeTests extends TestBase {
     @Test
     @Epic("Home")
     @Owner("d.litinskii")
-    @DisplayName("Check main elements on EN Home")
-    void checkMainElementsOnHomeEn() {
-        step("Open Home", () -> {
+    @Tag("networks")
+    @DisplayName("Check that VK link is right")
+    void CheckVkUrlIsRight() {
+        step("Open home", () -> {
             cbrHomePage.openPage();
         });
 
-        step("Switch to English", () -> {
-            cbrHomePage.switchToLanguage("EN");
+        step("Going to VK url and check the url", () -> {
+            cbrHomePage.checkAllNetWorksItemIsVisible();
+            cbrHomePage.checkVkUrlIsRight();
         });
 
-        step("Check main elements on Home", () -> {
-            cbrHomePage
-                    .checkTopHorizontalMenuIsVisible()
-                    .checkHeaderLeftMenuIsVisible()
-                    .checkHeaderLogoIsVisible("EN")
-                    .checkActiveSlideIsVisible();
-        });
     }
 
     @Test
     @Epic("Home")
     @Owner("d.litinskii")
-    @DisplayName("Check that all networks links are on Home")
-    void checkGoToYouTube() {
+    @Tag("networks")
+    @DisplayName("Check that OK link is right")
+    void CheckOkUrlIsRight() {
         step("Open home", () -> {
             cbrHomePage.openPage();
         });
 
-        step("Check networks links are on Home", () -> {
+        step("Going to OK url and check the url", () -> {
             cbrHomePage.checkAllNetWorksItemIsVisible();
+            cbrHomePage.checkOKUrlIsRight();
+        });
+
+    }
+
+    @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
+    @Tag("networks")
+    @DisplayName("Check that Yandex link is right")
+    void CheckYandexUrlIsRight() {
+        step("Open home", () -> {
+            cbrHomePage.openPage();
+        });
+
+        step("Going to Yandex url and check the url", () -> {
+            cbrHomePage.checkAllNetWorksItemIsVisible();
+            cbrHomePage.checkYandexUrlIsRight();
         });
     }
 }

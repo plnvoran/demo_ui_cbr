@@ -20,7 +20,7 @@ public interface ProjectConfig extends Config {
     String remoteDriverUrl();
 
     @Key("baseUrl")
-    @DefaultValue("https://allure.autotests.cloud")
+    @DefaultValue("https://www.cbr.ru/")
     String baseUrl();
 
     @Key("userNameSelenoid")
