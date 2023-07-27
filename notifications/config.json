@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "HW_Demoqa_Telegram_Litinskiy",
+    "environment": "https://github.com/plnvoran?tab=repositories",
+    "comment": "Результаты",
+    "reportLink": " https://jenkins.autotests.cloud/job/Students/job/HW_Demoqa_Telegram_Litinskiy/",
+    "language": "ru",
+    "allureFolder": "allure/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5748444507:AAEPM2QmU7znZbe2k_K_yjgK4DhzyjccHBg",
+    "chat": "-1001885654367",
+    "replyTo": ""
+  }
+}

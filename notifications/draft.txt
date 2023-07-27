@@ -1,0 +1,12 @@
+5748444507:AAEPM2QmU7znZbe2k_K_yjgK4DhzyjccHBg
+
+https://api.telegram.org/bot5748444507:AAEPM2QmU7znZbe2k_K_yjgK4DhzyjccHBg/getUpdates
+-1001885654367
+
+
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-1001885654367", "text": "This is a test from curl", "disable_notification": true}' \
+     https://api.telegram.org/bot5748444507:AAEPM2QmU7znZbe2k_K_yjgK4DhzyjccHBg/sendMessage
+
+     curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001885654367", "text": "This is a test from curl", "disable_notification": true}' https://api.telegram.org/bot5748444507:AAEPM2QmU7znZbe2k_K_yjgK4DhzyjccHBg/sendMessage
