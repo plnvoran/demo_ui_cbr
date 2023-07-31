@@ -146,6 +146,22 @@ public class CbrHomeTests extends TestBase {
             cbrHomePage.checkYandexUrlIsRight();
         });
     }
+
+    @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
+    @Tag("networks")
+    @DisplayName("Check that Youtube link is right")
+    void CheckYoUrlIsRight() {
+        step("Open home", () -> {
+            cbrHomePage.openPage();
+        });
+
+        step("Going to Yandex url and check the url", () -> {
+            cbrHomePage.checkAllNetWorksItemIsVisible();
+            cbrHomePage.checkYoutubeUrlIsRight();
+        });
+    }
 }
 
 

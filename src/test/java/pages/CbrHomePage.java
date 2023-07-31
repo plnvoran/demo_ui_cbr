@@ -93,4 +93,9 @@ public class CbrHomePage {
         return this;
     }
 
+    public CbrHomePage checkYoutubeUrlIsRight(){
+        netWorksComponent.checkYoutubeUrlIsRight();
+        return this;
+    }
+
 }

@@ -56,19 +56,19 @@ Bank of Russia— The Central Bank of the Russian Federation is the main issuing
 [Вернуться к оглавлению ⬆](#Содержание)
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
-<a id="cases-ui"></a>UI-кейсы:
+<a id="cases-ui"></a>автоматизированные UI-кейсы:
 
-:heavy_check_mark: Авторизация на сайте</br>
+:heavy_check_mark: Проверка наличия основных элементов главной страницы</br>
 
-:heavy_check_mark: Создание проекта</br>
+:heavy_check_mark: Проверка языка по умолчанию на главной странице</br>
 
-:heavy_check_mark: Удаление проекта</br>
+:heavy_check_mark: Проверка доступных языков на главной странице</br>
 
 :heavy_check_mark: Создание test case</br>
 
-:heavy_check_mark: Редактирование имяни test case</br>
+:heavy_check_mark: Проверка переключения языка на английский / русский</br>
 
-:heavy_check_mark: Добовление шагов в test case</br>
+:heavy_check_mark: Проверка перехода по ссылкам социальных сетей</br>
 
 :heavy_check_mark: Добовление tag в  test case</br>
 
@@ -76,21 +76,7 @@ Bank of Russia— The Central Bank of the Russian Federation is the main issuing
 
 :heavy_check_mark: Добовление attachment в test case</br>
 
-<a id="cases-api"></a>API-кейсы:
-
-:heavy_check_mark: Авторизация пользователя</br>
-
-:heavy_check_mark: Создание test case</br>
-
-:heavy_check_mark: Редактирование имяни test case</br>
-
-:heavy_check_mark: Добовление шагов в test case</br>
-
-:heavy_check_mark: Добовление tag в  test case</br>
-
-:heavy_check_mark: Добовление описания в test case</br>
-
-:heavy_check_mark: Удаление test case</br>
+<a id="cases-ui"></a>ручные UI-кейсы:
 
 
 # <a name="Варианты запуска">Варианты запуска</a>
@@ -103,11 +89,11 @@ gradle clean <tag>  -Dplatform=<platform>
 Дополнительные параметры:
 > `-DbrowserWithVersion` - для передачи браузера и версии        
 > `-DbrowserSize` - для передачи разрешения     
-> `-DapiBaseUrl=url` можно добавить для установки базового URL-адреса для тестов API.
+
 
 `tag` - теги для запуска выполнения тестов:
->- *api*
->- *web*
+>- *networks*
+>- *smoke*
 >- *regress*
  
 `platform` - определяет среду для запуска этих тестов:
@@ -119,18 +105,7 @@ gradle clean <tag>  -Dplatform=<platform>
 ./resources/config/${platform}.properties
 ```
 
-Допустимые комбинации:
-```mermaid
-graph LR
-A[tag] --> B[api]
-A --> C[web]
-A --> D[regress]
-B --> K[api]
-C --> E[browser_selenoid]
-C --> F[browser_local]
-D --> G[api+web_local]
-D --> L[api+web_selenoid]
-```
+
 
 [Вернуться к оглавлению ⬆](#Содержание)
 

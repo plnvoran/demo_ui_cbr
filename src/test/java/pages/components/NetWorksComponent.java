@@ -40,4 +40,9 @@ public class NetWorksComponent {
         networksItemOk.shouldBe(visible).click();
         Selenide.webdriver().shouldHave(url(networkUrlOk));
     }
+
+    public void checkYoutubeUrlIsRight() {
+        networksItemYouTube.shouldBe(visible).click();
+        Selenide.webdriver().shouldHave(url(networkUrlYoutube));
+    }
 }
