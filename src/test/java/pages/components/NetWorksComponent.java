@@ -2,6 +2,7 @@ package pages.components;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import pages.YouTubePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -10,7 +11,7 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 import static data.NetWorksUrls.*;
 
 public class NetWorksComponent {
-
+    YouTubePage youTubePage = new YouTubePage();
     SelenideElement networksItemVk = $(".header_networks ._vk"),
             networksItemYouTube = $(".header_networks ._yt"),
             networksItemTelegram = $(".header_networks ._tg"),
@@ -43,6 +44,7 @@ public class NetWorksComponent {
 
     public void checkYoutubeUrlIsRight() {
         networksItemYouTube.shouldBe(visible).click();
+        youTubePage.cookiePressAcceptAll();
         Selenide.webdriver().shouldHave(url(networkUrlYoutube));
     }
 }

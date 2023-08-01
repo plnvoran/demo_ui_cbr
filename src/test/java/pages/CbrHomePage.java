@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CbrHomePage {
     NetWorksComponent netWorksComponent = new NetWorksComponent();
+
     SelenideElement topHorizontalMenu = $(".home-header_top"),
             headerLogoRu = $(".home-header_top .header_logo"),
             headerLogoEn = $(".home-header_top .header_logo_eng"),
