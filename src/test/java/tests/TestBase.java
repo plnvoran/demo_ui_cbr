@@ -10,11 +10,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import pages.CbrHomePage;
+import pages.YouTubePage;
 
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
     CbrHomePage cbrHomePage  = new  CbrHomePage ();
+    YouTubePage youTubePage = new YouTubePage();
+
     @BeforeAll
     static void setUp() {
         String platform = Project.config.platform();

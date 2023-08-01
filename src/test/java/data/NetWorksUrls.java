@@ -6,4 +6,5 @@ public class NetWorksUrls {
             networkUrlOk = "https://ok.ru/group/68858679787580",
 
     networkUrlYoutube="https://www.youtube.com/user/BankofRussia";
+
 }
