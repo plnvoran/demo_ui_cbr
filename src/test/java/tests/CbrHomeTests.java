@@ -159,7 +159,6 @@ public class CbrHomeTests extends TestBase {
 
         step("Going to Yandex url and check the url", () -> {
             cbrHomePage.checkAllNetWorksItemIsVisible();
-            youTubePage.cookiePressAcceptAll();
             cbrHomePage.checkYoutubeUrlIsRight();
         });
     }
