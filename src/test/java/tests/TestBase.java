@@ -9,10 +9,12 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import pages.CbrHomePage;
 
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
+    CbrHomePage cbrHomePage = new CbrHomePage();
 
     @BeforeAll
     static void setUp() {
