@@ -1,5 +1,7 @@
 git init/.idea
 /build
 /.gradle
+/gradle
 /notifications/config.json
+/.idea
 *.class
