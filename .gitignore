@@ -4,4 +4,6 @@ git init/.idea
 /gradle
 /notifications/config.json
 /.idea
+gardlew
+gradlew.bat
 *.class
