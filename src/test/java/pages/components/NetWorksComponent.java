@@ -2,7 +2,6 @@ package pages.components;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import pages.YouTubePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -11,12 +10,20 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 import static data.NetWorksUrls.*;
 
 public class NetWorksComponent {
-    YouTubePage youTubePage = new YouTubePage();
-    SelenideElement networksItemVk = $(".header_networks ._vk"),
-            networksItemYouTube = $(".header_networks ._yt"),
-            networksItemTelegram = $(".header_networks ._tg"),
-            networksItemYandex = $(".header_networks ._ydzen"),
-            networksItemOk = $(".header_networks ._ok");
+
+    SelenideElement networksItemVk = $(".header_networks ._vk");
+    public SelenideElement networksItemYouTube = $(".header_networks ._yt");
+    SelenideElement networksItemTelegram = $(".header_networks ._tg");
+    SelenideElement networksItemYandex = $(".header_networks ._ydzen");
+    SelenideElement networksItemOk = $(".header_networks ._ok");
+    SelenideElement cookieAcceptAllButton = $(".VtwTSb button[aria-label='Accept all']");
+
+
+    private final String isRemote;
+
+    public NetWorksComponent(String isRemote) {
+        this.isRemote = isRemote;
+    }
 
     public void checkAllNetWorksItemIsVisible() {
         networksItemVk.shouldBe(visible);
@@ -42,9 +49,16 @@ public class NetWorksComponent {
         Selenide.webdriver().shouldHave(url(networkUrlOk));
     }
 
-    public void checkYoutubeUrlIsRight() {
+    public void checkTelegramUrlIsRight() {
+        networksItemTelegram.shouldBe(visible).click();
+        Selenide.webdriver().shouldHave(url(networkUrlTelegram));
+    }
+
+    public void clickYoutubeUrlIsRight() {
         networksItemYouTube.shouldBe(visible).click();
-        youTubePage.cookiePressAcceptAll();
+        if (isRemote.equals("remote")) {
+            cookieAcceptAllButton.should(visible).click();
+        }
         Selenide.webdriver().shouldHave(url(networkUrlYoutube));
     }
 }

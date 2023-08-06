@@ -151,13 +151,28 @@ public class CbrHomeTests extends TestBase {
     @Epic("Home")
     @Owner("d.litinskii")
     @Tag("networks")
-    @DisplayName("Check that Youtube link is right")
-    void CheckYoUrlIsRight() {
+    @DisplayName("Check that YouTube link is right")
+    void CheckYouTubeUrlIsRight() {
         step("Open home", () -> {
             cbrHomePage.openPage();
         });
 
-        step("Going to Yandex url and check the url", () -> {
+        step("Going to YouTube url and check the url", () -> {
+            cbrHomePage.checkAllNetWorksItemIsVisible();
+            cbrHomePage.checkYoutubeUrlIsRight();
+        });
+    }
+    @Test
+    @Epic("Home")
+    @Owner("d.litinskii")
+    @Tag("networks")
+    @DisplayName("Check that Youtube link is right")
+    void CheckTelegramUrlIsRight() {
+        step("Open home", () -> {
+            cbrHomePage.openPage();
+        });
+
+        step("Going to Telegram url and check the url", () -> {
             cbrHomePage.checkAllNetWorksItemIsVisible();
             cbrHomePage.checkYoutubeUrlIsRight();
         });

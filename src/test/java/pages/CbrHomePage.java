@@ -2,18 +2,17 @@ package pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import config.Project;
 import pages.components.NetWorksComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverConditions.url;
-import static data.NetWorksUrls.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CbrHomePage {
-    NetWorksComponent netWorksComponent = new NetWorksComponent();
+    NetWorksComponent netWorksComponent = new NetWorksComponent(Project.config.platform());
 
     SelenideElement topHorizontalMenu = $(".home-header_top"),
             headerLogoRu = $(".home-header_top .header_logo"),
@@ -22,6 +21,9 @@ public class CbrHomePage {
             activeSlide = $(".home-header_main .swiper-slide-active"),
             languageActive = $(".home-header_top .header_lang>._active"),
             languageNoActive = $(".home-header_top .header_lang_item>a");
+
+
+
 
     public CbrHomePage openPage() {
         open("");
@@ -85,17 +87,21 @@ public class CbrHomePage {
     }
 
     public CbrHomePage checkOKUrlIsRight() {
-        netWorksComponent. checkOKUrlIsRight();
+        netWorksComponent.checkOKUrlIsRight();
         return this;
     }
 
-    public CbrHomePage checkYandexUrlIsRight(){
+    public CbrHomePage checkYandexUrlIsRight() {
         netWorksComponent.checkYandexUrlIsRight();
         return this;
     }
 
-    public CbrHomePage checkYoutubeUrlIsRight(){
-        netWorksComponent.checkYoutubeUrlIsRight();
+    public CbrHomePage checkYoutubeUrlIsRight() {
+        netWorksComponent.clickYoutubeUrlIsRight();
+        return this;
+    }
+    public CbrHomePage checkTelegramUrlIsRight() {
+        netWorksComponent.checkTelegramUrlIsRight();
         return this;
     }
 
