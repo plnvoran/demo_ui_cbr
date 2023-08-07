@@ -1,9 +1,17 @@
+### IntelliJ IDEA ###
 /.idea
 /build
+
+### Gradle ###
 /.gradle
 /gradle
 /notifications/config.json
-/.idea
 gardlew
 gradlew.bat
+
+### Java ###
 *.class
+
+### Owner ###
+local.properties
+remote.properties
