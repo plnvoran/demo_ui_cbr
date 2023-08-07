@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class Project {
 
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
@@ -18,15 +20,15 @@ public class Project {
     }
 
     private static void validateEnvDependentProperties() {
-        Auth.validateProperty(config.platform(), "platform");
+        validateProperty(config.platform(), "platform");
         switch (config.platform()) {
             case "local":
-                Auth.validateProperty(Arrays.toString(config.browserAndVersion()), "browserWithVersion");
+                validateProperty(Arrays.toString(config.browserAndVersion()), "browserWithVersion");
                 break;
             case "remote":
-                Auth.validateProperty(config.remoteDriverUrl(), "remoteDriverUrl");
-                Auth.validateProperty(config.userNameSelenoid(), "userNameSelenoid");
-                Auth.validateProperty(config.passwordSelenoid(), "passwordSelenoid");
+                validateProperty(config.remoteDriverUrl(), "remoteDriverUrl");
+                validateProperty(config.userNameSelenoid(), "userNameSelenoid");
+                validateProperty(config.passwordSelenoid(), "passwordSelenoid");
                 break;
             default:
                 throw new IllegalStateException("Неправильное значение в 'platform' " + config);
@@ -35,5 +37,11 @@ public class Project {
 
     public static boolean isRemoteDriver() {
         return !(config.remoteDriverUrl() == null) && !config.remoteDriverUrl().isEmpty();
+    }
+
+    public static void validateProperty(String propertyValue, String propertyName) {
+        assertThat(propertyValue)
+                .withFailMessage("'%s' значение равно null или пусто!", propertyName)
+                .isNotEmpty();
     }
 }

@@ -1,5 +1,17 @@
-git init/.idea
+### IntelliJ IDEA ###
+/.idea
 /build
+
+### Gradle ###
 /.gradle
+/gradle
 /notifications/config.json
+gardlew
+gradlew.bat
+
+### Java ###
 *.class
+
+### Owner ###
+local.properties
+remote.properties
