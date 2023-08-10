@@ -97,9 +97,30 @@ gradle clean <tag>  -Dplatform=<platform>
 Если вы хотите использовать данный проект локально (на своем ПК), вам потребуется создать файлы конфигурации.
 
 `local.properties` - локальный запуск тестов со следующими параметрами:
->- *browserWithVersion='browserWithVersion''*
->- *browserSize='browserSize''*
->- *baseUrl='baseUrl''*
+>- *browserWithVersion*
+>- *browserSize*
+>- *baseUrl=*
+
+Пример файла
+>- *browserWithVersion=chrome,113.0
+>- *browserSize=1920x1080*
+>- *baseUrl=https://www.cbr.ru/*
+
+`remote.properties` - удаленный запуск тестов со следующими параметрами:
+>- *browserWithVersion*
+>- *browserSize*
+>- *baseUrl*
+>- *remoteDriverUrl*
+>- *userNameSelenoid*
+>- *passwordSelenoid*
+   
+Пример файла
+>- *browserWithVersion=chrome,113.0
+>- *browserSize=1920x1080*
+>- *baseUrl=yourSite.com*
+>- *remoteDriverUrl=remoteDriverUrl.com*
+>- *userNameSelenoid=Login*
+>- *passwordSelenoid=Password*
 
 
 [Вернуться к оглавлению ⬆](#Содержание)
