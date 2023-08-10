@@ -4,7 +4,7 @@
 <a href="https://www.cbr.ru/"><img src="images/logo/cbr_logo.PNG" width="950"></a>
 </p>
 
-Bank of Russia— The Central Bank of the Russian Federation is the main issuing bank and monetary regulator of the country.
+Bank of Russia — The Central Bank of the Russian Federation is the main issuing bank and monetary regulator of the country.
 
 
 # <a name="Содержание">Содержание</a>
@@ -55,29 +55,18 @@ Bank of Russia— The Central Bank of the Russian Federation is the main issuing
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-<a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
-<a id="cases-ui"></a>автоматизированные UI-кейсы:
 
-:heavy_check_mark: Проверка наличия основных элементов главной страницы</br>
-
-:heavy_check_mark: Проверка языка по умолчанию на главной странице</br>
-
-:heavy_check_mark: Проверка доступных языков на главной странице</br>
-
-:heavy_check_mark: Создание test case</br>
-
-:heavy_check_mark: Проверка переключения языка на английский / русский</br>
-
-:heavy_check_mark: Проверка перехода по ссылкам социальных сетей</br>
-
-:heavy_check_mark: Добовление tag в  test case</br>
-
-:heavy_check_mark: Добовление описания в test case</br>
-
-:heavy_check_mark: Добовление attachment в test case</br>
-
-<a id="cases-ui"></a>ручные UI-кейсы:
-
+# <a name="Реализованные проверки">Реализованные проверки</a>
+Тестовый проект состоит из веб-тестов (UI)
+Краткий список интересных фактов о проекте:
+- [x] Проверка наличия основных элементов главной страницы
+- [x] Проверка языка по умолчанию на главной странице
+- [x] Проверка доступных языков на главной странице
+- [x] Проверка переключения языка на английский / русский
+- [x] Проверка перехода по ссылкам социальных сетей
+- [x] Checking the operation of the 1st level menu items
+- [x] Checking the content of the first level menu items
+- [x] Checking the content of the second level menu items
 
 # <a name="Варианты запуска">Варианты запуска</a>
 
@@ -88,8 +77,7 @@ gradle clean <tag>  -Dplatform=<platform>
 ```
 Дополнительные параметры:
 > `-DbrowserWithVersion` - для передачи браузера и версии        
-> `-DbrowserSize` - для передачи разрешения     
-
+> `-DbrowserSize` - для передачи разрешения  
 
 `tag` - теги для запуска выполнения тестов:
 >- *networks*
@@ -104,7 +92,11 @@ gradle clean <tag>  -Dplatform=<platform>
 ```bash
 ./resources/config/${platform}.properties
 ```
-
+Если вы хотите использовать данный проект локально (на своем ПК), вам потребуется создать файлы конфигурации.
+`local.properties` - локальный запуск тестов со следующими параметрами:
+>- *browserWithVersion='browserWithVersion''*
+>- *browserSize='browserSize''*
+>- *baseUrl='baseUrl''*
 
 
 [Вернуться к оглавлению ⬆](#Содержание)
