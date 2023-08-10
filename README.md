@@ -102,9 +102,9 @@ gradle clean <tag>  -Dplatform=<platform>
 >- *baseUrl=*
 
 Пример файла
->- *browserWithVersion=chrome,113.0
+>- *browserWithVersion=chrome,113.0*
 >- *browserSize=1920x1080*
->- *baseUrl=https://www.cbr.ru/*
+>- *baseUrl=yourSite.com*
 
 `remote.properties` - удаленный запуск тестов со следующими параметрами:
 >- *browserWithVersion*
@@ -115,7 +115,7 @@ gradle clean <tag>  -Dplatform=<platform>
 >- *passwordSelenoid*
    
 Пример файла
->- *browserWithVersion=chrome,113.0
+>- *browserWithVersion=chrome,113.0*
 >- *browserSize=1920x1080*
 >- *baseUrl=yourSite.com*
 >- *remoteDriverUrl=remoteDriverUrl.com*
