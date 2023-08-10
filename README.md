@@ -92,7 +92,10 @@ gradle clean <tag>  -Dplatform=<platform>
 ```bash
 ./resources/config/${platform}.properties
 ```
+
+## <a name="Локальный запуск">Локальный запуск</a>
 Если вы хотите использовать данный проект локально (на своем ПК), вам потребуется создать файлы конфигурации.
+
 `local.properties` - локальный запуск тестов со следующими параметрами:
 >- *browserWithVersion='browserWithVersion''*
 >- *browserSize='browserSize''*
@@ -101,7 +104,7 @@ gradle clean <tag>  -Dplatform=<platform>
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/allure_api_ui/)</a>
+## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screens/JenkinsMain.png" width="950">
@@ -117,7 +120,7 @@ gradle clean <tag>  -Dplatform=<platform>
 
 После завершения сборки результаты тестирования доступны в:
 >- <code><strong>*Allure Report*</strong></code>
->- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
+>- <code><strong>*Allure TestOps*</strong></code> 
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
