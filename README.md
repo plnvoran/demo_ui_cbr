@@ -94,6 +94,9 @@ gradle clean <tag>  -Dplatform=<platform>
 ```
 
 ## <a name="Локальный запуск">Локальный запуск</a>
+Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.
+И относительно безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
+
 Если вы хотите использовать данный проект локально (на своем ПК), вам потребуется создать файлы конфигурации.
 
 `local.properties` - локальный запуск тестов со следующими параметрами:
@@ -128,16 +131,19 @@ gradle clean <tag>  -Dplatform=<platform>
 ## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
 Главная страница сборки:
 <p  align="center">
-<img src="images/screens/JenkinsMain.png" width="950">
+<img src="images/screens/JenkinsMain.PNG" width="950">
 </p>
 
-Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** и ***platform***:
+Параметризованное задание Jenkins может быть запущено с необходимыми 
+***tag***  
+***platform***
+***browserWithVersion***  
+***browserSize***
+***baseUrl***
+
 <p  align="center">
-<img src="images/screens/Jenkins.png" alt="JenkinsBuildParameters" width="950">
+<img src="images/screens/JenkinsParam.PNG" alt="JenkinsBuildParameters" width="950">
 </p>
-
-Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.\
-И относительно безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
 
 После завершения сборки результаты тестирования доступны в:
 >- <code><strong>*Allure Report*</strong></code>
