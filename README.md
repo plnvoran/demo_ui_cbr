@@ -131,7 +131,7 @@ gradle clean <tag>  -Dplatform=<platform>
 ## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
 Главная страница сборки:
 <p  align="center">
-<img src="images/screens/JenkinsMain.PNG" width="950">
+<img src="images/screen/JenkinsMain.PNG" width="950">
 </p>
 
 Параметризованное задание Jenkins может быть запущено с необходимыми 
