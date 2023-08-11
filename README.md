@@ -154,7 +154,7 @@ gradle clean <tag>  -Dplatform=<platform>
 # <a>Telegram уведомления</a>
 Telegram-бот отправляет краткий отчет в указанный телеграм-чат по результатам каждой сборки.
 <p  align="center">
-<img src="images/screens/Telegram.PNG" width="550">
+<img src="images/screen/Telegram.PNG" width="550">
 </p>
 
 Если вы хотите использовать данный проект для отправки отчета в ваш телеграм-чат, вам потребуется создать файл конфигурации.
@@ -166,7 +166,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 Пример файла
 <p  align="center">
-<img src="images/screens/TelegramConfig.PNG" width="550">
+<img src="images/screen/TelegramConfig.PNG" width="550">
 </p>
 
 
