@@ -159,12 +159,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 Если вы хотите использовать данный проект для отправки отчета в ваш телеграм-чат, вам потребуется создать файл конфигурации.
 
-`config.json` 
->- *browserWithVersion*
->- *browserSize*
->- *baseUrl=*
-
-Пример файла
+Пример файла `config.json`
 <p  align="center">
 <img src="images/screen/TelegramConfig.PNG" width="550">
 </p>
