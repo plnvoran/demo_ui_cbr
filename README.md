@@ -142,7 +142,7 @@ gradle clean <tag>  -Dplatform=<platform>
 ***baseUrl***
 
 <p  align="center">
-<img src="images/screens/JenkinsParam.PNG" alt="JenkinsBuildParameters" width="950">
+<img src="images/screen/JenkinsParam.PNG" alt="JenkinsBuildParameters" width="950">
 </p>
 
 После завершения сборки результаты тестирования доступны в:
