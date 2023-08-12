@@ -228,7 +228,7 @@ Telegram-бот отправляет краткий отчет в указанн
 # <a>Видео запуска тестов</a>
 
 <p align="center">
-  <img src="images/screen/video_ui_work_gif.gif" alt="Video">
+  <img src="images/video/video_ui_work_gif.gif" alt="Video">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
