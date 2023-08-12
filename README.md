@@ -207,20 +207,20 @@ Telegram-бот отправляет краткий отчет в указанн
 ## Allure TestOps Dashboard
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsDashboard.PNG" alt="AllureTestOpsTests" width="950">
+  <img src="images/screen/AllureTestOpsDashboard.PNG" alt="AllureTestOpsTests" width="950">
 </p>
 
 ## Allure TestOps Test Cases
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsTesCases.PNG" alt="AllureTestOpsTests" width="950">
+  <img src="images/screen/AllureTestOpsTesCases.PNG" alt="AllureTestOpsTests" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
 # <a>Интеграция с Jira</a>
 <p align="center">
-  <img src="images/screens/Jira.PNG" alt="JiraIntegration" width="950">
+  <img src="images/screen/Jira.PNG" alt="JiraIntegration" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
