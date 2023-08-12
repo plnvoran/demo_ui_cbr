@@ -185,7 +185,7 @@ Telegram-бот отправляет краткий отчет в указанн
 Может быть показана полная информация о каждом тесте: теги, продолжительность, подробные шаги.
 
 <p align="center">
-  <img src="images/screens/AllureTestSuites.PNG" alt="AllureReportSuites" width="750">
+  <img src="images/screen/AllureTestSuites.PNG" alt="AllureTestSuites" width="750">
 </p>
 
 Также доступны дополнительные тестовые артефакты:
