@@ -170,7 +170,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-# <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/19/allure/)</a>
+# <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/demo_ui_cbr/allure/)</a>
 
 ## Главная страница
 Главная страница отчета Allure содержит следующие блоки:
@@ -180,15 +180,15 @@ Telegram-бот отправляет краткий отчет в указанн
 >- <code><strong>*SUITES*</strong></code> - отображает распределение тестов по сьютам
 >- <code><strong>*CATEGORIES*</strong></code> - отображает распределение неудачных тестов по типам дефектов
 <p align="center">
-  <img src="images/screens//AllureReport.png" width="950">
+  <img src="images/screen/AllureReport.PNG" width="950">
 </p>
 
 ## Список тестов с шагами и тестовыми артефактами
-На странице список тестов, сгруппированных по наборам, с указанием статуса для каждого теста.\
+На странице список тестов с указанием статуса для каждого теста.
 Может быть показана полная информация о каждом тесте: теги, продолжительность, подробные шаги.
 
 <p align="center">
-  <img src="images/screens/AllureTestSuites.png" alt="AllureReportSuites" width="750">
+  <img src="images/screens/AllureTestSuites.PNG" alt="AllureReportSuites" width="750">
 </p>
 
 Также доступны дополнительные тестовые артефакты:
@@ -197,13 +197,10 @@ Telegram-бот отправляет краткий отчет в указанн
 >- Video
 >- Browserstack full info link
 
-<p align="left">
-  <img src="images/screens/AllureTestSuites2.png" alt="AllureReportSuites2" width="950">
-</p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/2993/dashboards)</a>
+# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3588/dashboards)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
@@ -213,39 +210,20 @@ Telegram-бот отправляет краткий отчет в указанн
 ## Allure TestOps Dashboard
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsDashboard.png" alt="AllureTestOpsTests" width="950">
+  <img src="images/screens/AllureTestOpsDashboard.PNG" alt="AllureTestOpsTests" width="950">
 </p>
-
-<p align="center">
-  <img src="images/screens/AllureTestOpsDashboard2.png" alt="AllureTestOpsTests2" width="950">
-</p>
-
-```mermaid
-stateDiagram-v2
-state "Тест создан/обновлен в коде" as A
-state "Запускается сборка в Jenkins" as B
-state "Сборка в Jenkins завершена" as C
-state "Запуск Allure TestOps, связанный со сборкой, отмеченной как закрытая" as D
-state "Все выполненные тест-кейсы автоматически создаются/обновляются в соответствии с кодом" as E
-[*] --> A
-A --> B
-B --> C
-C --> D
-D --> E
-E --> A
-```
 
 ## Allure TestOps Test Cases
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsTesCases.png" alt="AllureTestOpsTests" width="950">
+  <img src="images/screens/AllureTestOpsTesCases.PNG" alt="AllureTestOpsTests" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
 # <a>Интеграция с Jira</a>
 <p align="center">
-  <img src="images/screens/Jira.png" alt="JiraIntegration" width="950">
+  <img src="images/screens/Jira.PNG" alt="JiraIntegration" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
@@ -253,7 +231,7 @@ E --> A
 # <a>Видео запуска тестов</a>
 
 <p align="center">
-  <img src="images/screens/video.gif" alt="JiraIntegration">
+  <img src="images/screen/video_ui_work_gif.gif" alt="Video">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
