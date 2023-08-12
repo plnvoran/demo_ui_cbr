@@ -102,7 +102,7 @@ gradle clean <tag>  -Dplatform=<platform>
 `local.properties` - локальный запуск тестов со следующими параметрами:
 >- *browserWithVersion*
 >- *browserSize*
->- *baseUrl=*
+>- *baseUrl*
 
 Пример файла
 >- *browserWithVersion=chrome,113.0*
@@ -134,7 +134,8 @@ gradle clean <tag>  -Dplatform=<platform>
 <img src="images/screen/JenkinsMain.PNG" width="950">
 </p>
 
-Параметризованное задание Jenkins может быть запущено с необходимыми 
+Параметризованное задание Jenkins может быть запущено с необходимыми параметрами:
+
 ***tag***  
 ***platform***
 ***browserWithVersion***  
@@ -163,10 +164,6 @@ Telegram-бот отправляет краткий отчет в указанн
 <p  align="center">
 <img src="images/screen/TelegramConfig.PNG" width="550">
 </p>
-
-
-
-
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
