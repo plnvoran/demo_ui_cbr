@@ -1,4 +1,4 @@
-# Test automation project for [Bank of Russia](https://www.cbr.ru/)
+Test automation project for [Bank of Russia](https://www.cbr.ru/)
 
 <p align="center">  
 <a href="https://www.cbr.ru/"><img src="images/logo/cbr_logo.PNG" width="950"></a>
@@ -6,10 +6,9 @@
 
 Bank of Russia — The Central Bank of the Russian Federation is the main issuing bank and monetary regulator of the country.
 
-
-# <a name="Содержание">Содержание</a>
+<a name="Содержание">Содержание</a>
 + [Описание](#Описание)
-+ [Technologies and Tools](#Technologies-and-tools)
++ [Technologies and Tools](#Technologies and Tools)
 + [Варианты запуска](#Варианты-запуска)
     + [Команды для gradle](#команды-для-gradle)
     + [Запуск в Jenkins](#запуск-в-jenkins)
