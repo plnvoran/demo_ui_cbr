@@ -9,7 +9,7 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 
 # <a name="Содержание">Содержание</a>
 + [Описание](#Описание)
-+ [Technologies and Tools](#Technologies-and-Tools)
++ [Technologies and Tools](#Technologies-and-tools)
 + [Варианты запуска](#Варианты-запуска)
     + [Команды для gradle](#команды-для-gradle)
     + [Запуск в Jenkins](#запуск-в-jenkins)
