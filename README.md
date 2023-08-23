@@ -21,16 +21,15 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 + [Test run video](#test-run-video)
 
 # <a name="Description">Description</a>
-Тестовый проект состоит из веб-тестов (UI)
-Краткий список интересных фактов о проекте:
-- [x] `Page Object` проектирование
-- [x] Параметризованные тесты
-- [x] Различные файлы конфигурации для запуска теста в зависимости от параметров сборки
-- [x] Конфигурация с библиотекой `Owner`
-- [x] Интеграция с `Allure TestOps`
-- [x] Автотесты как тестовая документация
-- [x] Интеграция с `Jira`
-
+Test project consists of web tests (UI)
+A short list of interesting facts about the project:
+- [x] `Page Object` design
+- [x] Parameterized tests
+- [x] Different config files to run test depending on build options
+- [x] Configuration with `Owner` library
+- [x] Integration with `Allure TestOps`
+- [x] Autotests as test documentation
+- [x] Integration with `Jira`
 
 # <a name="Technologies and Tools">Technologies and Tools</a>
 
@@ -43,27 +42,25 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 |:------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | <a href="https://www.atlassian.com/ru/software/jira"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a> | <a href="https://github.com/allure-framework"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> | <a href="https://qameta.io/"><img src="images/logo/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>    |
 
-
-Автотесты в этом проекте написаны на `Java` использую `Selenide` фреймворк.\
-`Gradle` - используется как инструмент автоматизации сборки.  \
-`JUnit5` - для выполнения тестов.\
-`Jenkins` - CI/CD для запуска тестов удаленно.\
-`Selenoid` - для удаленного запуска браузера в `Docker` контейнерах.\
-`Allure Report` - для визуализации результатов тестирования.\
-`Telegram Bot` - для уведомлений о результатах тестирования.\
-`Allure TestOps` - как система управления тестированием.
+The autotests in this project are written in `Java` using the `Selenide` framework.\
+`Gradle` - used as a build automation tool. \
+`JUnit5` - for running tests.\
+`Jenkins` - CI/CD for running tests remotely.\
+`Selenoid` - for launching a browser remotely in `Docker` containers.\
+`Allure Report` - for visualization of test results.\
+`Telegram Bot` - for notifications about test results.\
+`Allure TestOps` - as a test management system.
 
 [Back to Contents ⬆](#Contents)
 
-
 # <a name="Implemented checks">Implemented checks</a>
-Тестовый проект состоит из веб-тестов (UI)
-Краткий список интересных фактов о проекте:
-- [x] Проверка наличия основных элементов главной страницы
-- [x] Проверка языка по умолчанию на главной странице
-- [x] Проверка доступных языков на главной странице
-- [x] Проверка переключения языка на английский / русский
-- [x] Проверка перехода по ссылкам социальных сетей
+Test project consists of web tests (UI)
+A short list of interesting facts about the project:
+- [x] Check for the presence of the main elements of the main page
+- [x] Check default language on main page
+- [x] Check for available languages ​​on homepage
+- [x] Check language switching to English / Russian
+- [x] Social link checker
 - [x] Checking the operation of the 1st level menu items
 - [x] Checking the content of the first level menu items
 - [x] Checking the content of the second level menu items
@@ -73,66 +70,41 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 # <a name="Launch Options">Launch Options</a>
 
 ## <a name="Gradle commands">Gradle commands</a>
-Для запуска локально и в Jenkins используется следующая команда::
+To run locally and in Jenkins use the following command:
 ```bash
-gradle clean <tag>  -Dplatform=<platform>
+gradle clean <tag> -Dplatform=<platform>
 ```
-Дополнительные параметры:
-> `-DbrowserWithVersion` - для передачи браузера и версии        
-> `-DbrowserSize` - для передачи разрешения  
+Extra options:
+> `-DbrowserWithVersion` - to pass browser and version
+> `-DbrowserSize` - to pass permission
 
-`tag` - теги для запуска выполнения тестов:
+`tag` - tags to start running tests:
 >- *networks*
 >- *smoke*
->- *regress*
- 
-`platform` - определяет среду для запуска этих тестов:
->- *local* - для запуска тестов локально
->- *remote* - для запуска тестов удаленно на selenoid
+>- *regression*
 
-Дополнительные свойства извлекаются из соответствующего файла конфигурации (в зависимости от значения `platform`):
+`platform` - specifies the environment to run these tests:
+>- *local* - to run tests locally
+>- *remote* - to run tests remotely on selenoid
+
+Additional properties are retrieved from the corresponding configuration file (depending on the value of `platform`):
 ```bash
 ./resources/config/${platform}.properties
 ```
 
 ## <a name="Launch Local">Launch Local</a>
-Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.
-И  безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
-
-Если вы хотите использовать данный проект локально (на своем ПК), вам потребуется создать файлы конфигурации.
-
-`local.properties` - локальный запуск тестов со следующими параметрами:
->- *browserWithVersion*
->- *browserSize*
->- *baseUrl*
-
-Пример файла `local.properties`
-<p  align="left">
-<img src="images/screen/local.png" width="200" height="100">
-</p>
-
-`remote.properties` - удаленный запуск тестов со следующими параметрами:
->- *browserWithVersion*
->- *browserSize*
->- *baseUrl*
->- *remoteDriverUrl*
->- *userNameSelenoid*
->- *passwordSelenoid*
-
-Пример файла `remote.properties`
-<p  align="left">
-<img src="images/screen/remote.png"  width="200" height="100">
-</p>
 
 [Back to Contents ⬆](#Contents)
 
 ## <a name="Run in Jenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
-Главная страница сборки:
+> The link is available only to authorized users.
+
+Build main page:
 <p  align="center">
 <img src="images/screen/JenkinsMain.PNG" width="950">
 </p>
 
-Параметризованное задание Jenkins может быть запущено с необходимыми параметрами:
+Parameterized Jenkins job can be run with the required parameters:
 
 ***tag***  
 ***platform***
@@ -144,21 +116,21 @@ gradle clean <tag>  -Dplatform=<platform>
 <img src="images/screen/JenkinsParam.PNG" alt="JenkinsBuildParameters" width="950">
 </p>
 
-После завершения сборки результаты тестирования доступны в:
+After the build is complete, the test results are available in:
 >- <code><strong>*Allure Report*</strong></code>
 >- <code><strong>*Allure TestOps*</strong></code> 
 
 [Back to Contents ⬆](#Contents)
 
 # <a>Telegram notifications</a>
-Telegram-бот отправляет краткий отчет в указанный телеграм-чат по результатам каждой сборки.
+Telegram-бот sends a short report to the specified telegram chat based on the results of each build.
 <p  align="center">
 <img src="images/screen/Telegram.PNG" width="550">
 </p>
 
-Если вы хотите использовать данный проект для отправки отчета в ваш телеграм-чат, вам потребуется создать файл конфигурации.
+If you want to use this project to send a report to your telegram chat, you will need to create a configuration file.
 
-Пример файла `config.json`
+Example `config.json` file
 <p  align="center">
 <img src="images/screen/TelegramConfig.PNG" width="550">
 </p>
@@ -166,27 +138,28 @@ Telegram-бот отправляет краткий отчет в указанн
 [Back to Contents ⬆](#Contents)
 
 # <a name="AllureReport">Test results in [Allure Report](https://jenkins.autotests.cloud/job/demo_ui_cbr/allure/)</a>
+> The link is available only to authorized users.
 
-## Главная страница
-Главная страница отчета Allure содержит следующие блоки:
+## Main page
+The main page of the Allure report contains the following blocks:
+>- <code><strong>*ALLURE REPORT*</strong></code> - displays the date and time of the test, the total number of tests run, as well as a chart with the percentage and number of successful, failed and broken tests during the execution of tests
+>- <code><strong>*TREND*</strong></code> - displays the test execution trend for all runs
+>- <code><strong>*SUITES*</strong></code> - displays the distribution of tests by suite
+>- <code><strong>*CATEGORIES*</strong></code> - displays the distribution of failed tests by defect type
 
->- <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время теста, общее количество запущенных тестов, а также диаграмму с процентом и количеством успешных, упавших и сломавшихся в процессе выполнения тестов
->- <code><strong>*TREND*</strong></code> - отображает тенденцию выполнения тестов для всех запусков
->- <code><strong>*SUITES*</strong></code> - отображает распределение тестов по сьютам
->- <code><strong>*CATEGORIES*</strong></code> - отображает распределение неудачных тестов по типам дефектов
 <p align="center">
   <img src="images/screen/AllureReport.PNG" width="950">
 </p>
 
-## Список тестов с шагами и тестовыми артефактами
-На странице список тестов с указанием статуса для каждого теста.
-Может быть показана полная информация о каждом тесте: теги, продолжительность, подробные шаги.
+## List of tests with steps and test artifacts
+On the page is a list of tests indicating the status for each test.
+Full information about each test can be shown: tags, duration, detailed steps.
 
 <p align="center">
   <img src="images/screen/AllureTestSuites.PNG" alt="AllureTestSuites" width="750">
 </p>
 
-Также доступны дополнительные тестовые артефакты:
+Additional test artifacts are also available:
 >- Screenshot
 >- Page Source
 >- Video
@@ -196,11 +169,11 @@ Telegram-бот отправляет краткий отчет в указанн
 [Back to Contents ⬆](#Contents)
 
 # <a>Integration with [Allure TestOps](https://allure.autotests.cloud/project/3588/dashboards)</a>
-> Ссылка доступна только авторизованным пользователям.
+> The link is available only to authorized users.
 
-Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
-поэтому нет необходимости в синхронизации ручных тест-кейсов и автотестов.\
-Достаточно создать и обновить автотест в коде и тест-кейс всегда будет в актуальном состоянии.
+The test cases in the project are imported and constantly updated from the code,
+therefore, there is no need to synchronize manual test cases and autotests.\
+It is enough to create and update an autotest in the code and the test case will always be up to date.
 
 ## Allure TestOps Dashboard
 
@@ -217,6 +190,7 @@ Telegram-бот отправляет краткий отчет в указанн
 [Back to Contents ⬆](#Contents)
 
 # <a>Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-847)</a>
+> The link is available only to authorized users.
 <p align="center">
   <img src="images/screen/Jira.PNG" alt="JiraIntegration" width="950">
 </p>
