@@ -11,7 +11,6 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 + [Technologies and Tools](#technologies-and-tools)
 + [Implemented checks](#implemented-checks)
 + [Launch Options](#launch-options)
-    + [Gradle commands](#gradle-commands)
     + [Launch Local](#launch-local)
     + [Run in Jenkins](#run-in-jenkins)
 + [Telegram notifications](#telegram-notifications)
@@ -68,8 +67,8 @@ A short list of interesting facts about the project:
 [Back to Contents ⬆](#Contents)
 
 # <a name="Launch Options">Launch Options</a>
+## <a name="Launch Local">Launch Local</a>
 
-## <a name="Gradle commands">Gradle commands</a>
 To run locally and in Jenkins use the following command:
 ```bash
 gradle clean <tag> -Dplatform=<platform>
@@ -92,7 +91,7 @@ Additional properties are retrieved from the corresponding configuration file (d
 ./resources/config/${platform}.properties
 ```
 
-## <a name="Launch Local">Launch Local</a>
+
 
 [Back to Contents ⬆](#Contents)
 
