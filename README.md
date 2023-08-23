@@ -105,7 +105,7 @@ gradle clean <tag>  -Dplatform=<platform>
 
 Пример файла `local.properties`
 <p  align="center">
-<img src="images/screen/local.png" width="400">
+<img src="images/screen/local.png" width="200" height="100">
 </p>
 
 `remote.properties` - удаленный запуск тестов со следующими параметрами:
@@ -118,8 +118,9 @@ gradle clean <tag>  -Dplatform=<platform>
 
 Пример файла `remote.properties`
 <p  align="center">
-<img src="images/screen/remote.png" width="400">
+<img src="images/screen/remote.png"  width="200" height="100">
 </p>
+
 
 
 [Вернуться к оглавлению ⬆](#Содержание)
