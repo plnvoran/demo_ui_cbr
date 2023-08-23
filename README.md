@@ -7,19 +7,20 @@
 Bank of Russia — The Central Bank of the Russian Federation is the main issuing bank and monetary regulator of the country.
 
 # <a name="Contents">Contents</a>
-+ [Описание](#Описание)
++ [Description](#Description)
 + [Technologies and Tools](#technologies-and-tools)
-+ [Варианты запуска](#Варианты-запуска)
-    + [Команды для gradle](#команды-для-gradle)
-    + [Запуск в Jenkins](#запуск-в-jenkins)
-+ [Telegram уведомления](#Telegram-уведомления)
-+ [Результаты тестов в Allure Report](#Результаты-тестов-в-Allure-Report)
++ [Implemented checks](#implemented-checks)
++ [Launch Options](#launch-options)
+    + [Gradle commands](#gradle-commands)
+    + [Launch Local](#launch-local)
+    + [Run in Jenkins](#run-in-jenkins)
++ [Telegram notifications](#telegram-notifications)
++ [Test results in Allure Report](#test-results-in-allure-report)
 + [Интеграция с Allure TestOps](#Интеграция-с-Allure-TestOps)
 + [Интеграция с Jira](#Интеграция-с-Jira)
 + [Видео запуска тестов](#Видео-запуска-тестов)
 
-
-# <a name="Описание">Описание</a>
+# <a name="Description">Description</a>
 Тестовый проект состоит из веб-тестов (UI)
 Краткий список интересных фактов о проекте:
 - [x] `Page Object` проектирование
@@ -52,10 +53,10 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - как система управления тестированием.
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
 
-# <a name="Реализованные проверки">Реализованные проверки</a>
+# <a name="Implemented checks">Implemented checks</a>
 Тестовый проект состоит из веб-тестов (UI)
 Краткий список интересных фактов о проекте:
 - [x] Проверка наличия основных элементов главной страницы
@@ -67,9 +68,9 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 - [x] Checking the content of the first level menu items
 - [x] Checking the content of the second level menu items
 
-# <a name="Варианты запуска">Варианты запуска</a>
+# <a name="Launch Options">Launch Options</a>
 
-## <a name="GradleCommand">Команды для Gradle</a>
+## <a name="Gradle commands">Gradle commands</a>
 Для запуска локально и в Jenkins используется следующая команда::
 ```bash
 gradle clean <tag>  -Dplatform=<platform>
@@ -92,7 +93,7 @@ gradle clean <tag>  -Dplatform=<platform>
 ./resources/config/${platform}.properties
 ```
 
-## <a name="Локальный запуск">Локальный запуск</a>
+## <a name="Launch Local">Launch Local</a>
 Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.
 И  безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
 
@@ -121,11 +122,9 @@ gradle clean <tag>  -Dplatform=<platform>
 <img src="images/screen/remote.png"  width="200" height="100">
 </p>
 
+[Back to Contents ⬆](#Contents)
 
-
-[Вернуться к оглавлению ⬆](#Содержание)
-
-## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
+## <a name="Run in Jenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screen/JenkinsMain.PNG" width="950">
@@ -147,9 +146,9 @@ gradle clean <tag>  -Dplatform=<platform>
 >- <code><strong>*Allure Report*</strong></code>
 >- <code><strong>*Allure TestOps*</strong></code> 
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
-# <a>Telegram уведомления</a>
+# <a>Telegram notifications</a>
 Telegram-бот отправляет краткий отчет в указанный телеграм-чат по результатам каждой сборки.
 <p  align="center">
 <img src="images/screen/Telegram.PNG" width="550">
@@ -162,9 +161,9 @@ Telegram-бот отправляет краткий отчет в указанн
 <img src="images/screen/TelegramConfig.PNG" width="550">
 </p>
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
-# <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/demo_ui_cbr/allure/)</a>
+# <a name="AllureReport">Test results in [Allure Report](https://jenkins.autotests.cloud/job/demo_ui_cbr/allure/)</a>
 
 ## Главная страница
 Главная страница отчета Allure содержит следующие блоки:
@@ -192,7 +191,7 @@ Telegram-бот отправляет краткий отчет в указанн
 >- Browserstack full info link
 
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
 # <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3588/dashboards)</a>
 > Ссылка доступна только авторизованным пользователям.
@@ -213,14 +212,14 @@ Telegram-бот отправляет краткий отчет в указанн
   <img src="images/screen/AllureTestOpsTesCases.PNG" alt="AllureTestOpsTests" width="950">
 </p>
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
 # <a>Интеграция с Jira</a>
 <p align="center">
   <img src="images/screen/Jira.PNG" alt="JiraIntegration" width="950">
 </p>
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
 
 # <a>Видео запуска тестов</a>
 
@@ -228,4 +227,4 @@ Telegram-бот отправляет краткий отчет в указанн
   <img src="images/video/video_ui_work_gif.gif" alt="Video">
 </p>
 
-[Вернуться к оглавлению ⬆](#Содержание)
+[Back to Contents ⬆](#Contents)
