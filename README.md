@@ -16,9 +16,9 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
     + [Run in Jenkins](#run-in-jenkins)
 + [Telegram notifications](#telegram-notifications)
 + [Test results in Allure Report](#test-results-in-allure-report)
-+ [Интеграция с Allure TestOps](#Интеграция-с-Allure-TestOps)
-+ [Интеграция с Jira](#Интеграция-с-Jira)
-+ [Видео запуска тестов](#Видео-запуска-тестов)
++ [Integration with Allure TestOps](#integration-with-allure-testops)
++ [Integration with Jira](#integration-with-jira)
++ [Test run video](#test-run-video)
 
 # <a name="Description">Description</a>
 Тестовый проект состоит из веб-тестов (UI)
@@ -67,6 +67,8 @@ Bank of Russia — The Central Bank of the Russian Federation is the main issuin
 - [x] Checking the operation of the 1st level menu items
 - [x] Checking the content of the first level menu items
 - [x] Checking the content of the second level menu items
+
+[Back to Contents ⬆](#Contents)
 
 # <a name="Launch Options">Launch Options</a>
 
@@ -193,7 +195,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Back to Contents ⬆](#Contents)
 
-# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3588/dashboards)</a>
+# <a>Integration with [Allure TestOps](https://allure.autotests.cloud/project/3588/dashboards)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
@@ -214,14 +216,14 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Back to Contents ⬆](#Contents)
 
-# <a>Интеграция с Jira</a>
+# <a>Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-847)</a>
 <p align="center">
   <img src="images/screen/Jira.PNG" alt="JiraIntegration" width="950">
 </p>
 
 [Back to Contents ⬆](#Contents)
 
-# <a>Видео запуска тестов</a>
+# <a>Test run video]</a>
 
 <p align="center">
   <img src="images/video/video_ui_work_gif.gif" alt="Video">
