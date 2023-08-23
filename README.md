@@ -104,7 +104,7 @@ gradle clean <tag>  -Dplatform=<platform>
 >- *baseUrl*
 
 Пример файла `local.properties`
-<p  align="center">
+<p  align="left">
 <img src="images/screen/local.png" width="200" height="100">
 </p>
 
@@ -117,7 +117,7 @@ gradle clean <tag>  -Dplatform=<platform>
 >- *passwordSelenoid*
 
 Пример файла `remote.properties`
-<p  align="center">
+<p  align="left">
 <img src="images/screen/remote.png"  width="200" height="100">
 </p>
 
