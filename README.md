@@ -1,4 +1,4 @@
-# <a name="Test automation project ">Test automation project for [Bank of Russia](https://www.cbr.ru/)</a>
+# <a name="Test automation project ">Test automation project for [Bank of Russia](https://www.cbr.ru/) website</a>
 
 <p align="center">  
 <a href="https://www.cbr.ru/"><img src="images/logo/cbr_logo.PNG" width="950"></a>
