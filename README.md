@@ -91,8 +91,6 @@ Additional properties are retrieved from the corresponding configuration file (d
 ./resources/config/${platform}.properties
 ```
 
-
-
 [Back to Contents ⬆](#Contents)
 
 ## <a name="Run in Jenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/demo_ui_cbr/)</a>
@@ -105,11 +103,11 @@ Build main page:
 
 Parameterized Jenkins job can be run with the required parameters:
 
-***tag***  
-***platform***
-***browserWithVersion***  
-***browserSize***
-***baseUrl***
+>- *tag*
+>- *platform*
+>- *browserWithVersion*
+>- *browserSize*
+>- *baseUrl*
 
 <p  align="center">
 <img src="images/screen/JenkinsParam.PNG" alt="JenkinsBuildParameters" width="950">
