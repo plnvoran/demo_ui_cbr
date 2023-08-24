@@ -194,7 +194,7 @@ It is enough to create and update an autotest in the code and the test case will
 
 [Back to Contents ⬆](#Contents)
 
-# <a>Test run video]</a>
+# <a>Test run video</a>
 
 <p align="center">
   <img src="images/video/video_ui_work_gif.gif" alt="Video">
