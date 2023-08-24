@@ -93,13 +93,13 @@ Additional properties are retrieved from the corresponding configuration file (d
 ```
 
 Example `local.properties` file
-<p  align="center">
-<img src="images/screen/local.png" width="550">
+<p  align="left">
+<img src="images/screen/local.png" width="300">
 </p>
 
 Example `remote.properties` file
-<p  align="center">
-<img src="images/screen/remote.PNG" width="550">
+<p  align="left">
+<img src="images/screen/remote.png" width="300">
 </p>
 
 [Back to Contents ⬆](#Contents)
