@@ -8,6 +8,7 @@
 /notifications/config.json
 gardlew
 gradlew.bat
+settings.gradle
 
 ### Java ###
 *.class
