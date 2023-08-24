@@ -57,7 +57,7 @@ Test project consists of web tests (UI)
 A short list of interesting facts about the project:
 - [x] Check for the presence of the main elements of the main page
 - [x] Check default language on main page
-- [x] Check for available languages ​​on homepage
+- [x] Check for available languages on homepage
 - [x] Check language switching to English / Russian
 - [x] Social link checker
 - [x] Checking the operation of the 1st level menu items
