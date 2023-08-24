@@ -22,9 +22,6 @@ public class CbrHomePage {
             languageActive = $(".home-header_top .header_lang>._active"),
             languageNoActive = $(".home-header_top .header_lang_item>a");
 
-
-
-
     public CbrHomePage openPage() {
         open("");
         return this;
@@ -98,10 +95,6 @@ public class CbrHomePage {
 
     public CbrHomePage checkYoutubeUrlIsRight() {
         netWorksComponent.clickYoutubeUrlIsRight();
-        return this;
-    }
-    public CbrHomePage checkTelegramUrlIsRight() {
-        netWorksComponent.checkTelegramUrlIsRight();
         return this;
     }
 

@@ -11,8 +11,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import pages.CbrHomePage;
 
-import static com.codeborne.selenide.Selenide.open;
-
 public class TestBase {
     CbrHomePage cbrHomePage = new CbrHomePage();
 
@@ -27,7 +25,6 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
-        open();
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 

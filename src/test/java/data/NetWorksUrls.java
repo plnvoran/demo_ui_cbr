@@ -6,6 +6,5 @@ public class NetWorksUrls {
             networkUrlYandex = "https://dzen.ru/cbr",
             networkUrlOk = "https://ok.ru/group/68858679787580",
             networkUrlYoutube = "https://www.youtube.com/user/BankofRussia",
-            networkUrlTelegram="https://t.me/centralbank_russia";
-
+            networkUrlTelegram = "https://t.me/centralbank_russia";
 }

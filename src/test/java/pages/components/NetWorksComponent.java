@@ -5,19 +5,17 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static data.NetWorksUrls.*;
 
 public class NetWorksComponent {
 
     SelenideElement networksItemVk = $(".header_networks ._vk");
-    public SelenideElement networksItemYouTube = $(".header_networks ._yt");
+    SelenideElement networksItemYouTube = $(".header_networks ._yt");
     SelenideElement networksItemTelegram = $(".header_networks ._tg");
     SelenideElement networksItemYandex = $(".header_networks ._ydzen");
     SelenideElement networksItemOk = $(".header_networks ._ok");
     SelenideElement cookieAcceptAllButton = $(".VtwTSb button[aria-label='Accept all']");
-
 
     private final String isRemote;
 
@@ -37,7 +35,6 @@ public class NetWorksComponent {
         networksItemVk.shouldBe(visible).click();
         Selenide.webdriver().shouldHave(url(networkUrlVk));
     }
-
 
     public void checkYandexUrlIsRight() {
         networksItemYandex.shouldBe(visible).click();

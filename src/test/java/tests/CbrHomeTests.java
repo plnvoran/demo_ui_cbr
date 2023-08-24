@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -162,6 +161,7 @@ public class CbrHomeTests extends TestBase {
             cbrHomePage.checkYoutubeUrlIsRight();
         });
     }
+
     @Test
     @Epic("Home")
     @Owner("d.litinskii")
