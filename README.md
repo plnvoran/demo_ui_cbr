@@ -181,7 +181,7 @@ Additional test artifacts are also available:
 
 The test cases in the project are imported and constantly updated from the code,
 therefore, there is no need to synchronize manual test cases and autotests.\
-It is enough to create and update an autotest in the code and the test case will always be up to date.
+It is enough to create and update an autotest in the code and the test case will always be up-to-date.
 
 ## Allure TestOps Dashboard
 
